@@ -17,7 +17,7 @@ function watchFiles() {
     gulp.watch("./src/*.scss", css);
 }
 gulp.task('scripts', function() {
-    var tsconfig = require("./src/tsconfig.json");
+    var tsconfig = require("./tsconfig.json");
     var filesGLob = tsconfig.filesGlob;
     return gulp.src(filesGLob)
         .pipe(ts(tsconfig.compilerOptions))
