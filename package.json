@@ -32,6 +32,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
     "gulp": "^4.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-typescript": "^5.0.1",

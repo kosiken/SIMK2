@@ -29,3 +29,6 @@ local.settings.json
 /tests
 /package.lock.json
 node_modules
+/lib/models/models.test.js
+/.vscode
+/package-lock.json

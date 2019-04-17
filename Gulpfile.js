@@ -16,7 +16,7 @@ gulp.task('watch', watchFiles)
 function watchFiles() {
     gulp.watch("./src/*.scss", css);
 }
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
     var tsconfig = require("./tsconfig.json");
     var filesGLob = tsconfig.filesGlob;
     return gulp.src(filesGLob)
