@@ -1,0 +1,174 @@
+.content-home {
+  margin: 8px 0;
+}
+
+.spacin {
+  display: block;
+}
+
+@media (min-width: 840px) {
+  .spacin {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.btn-primary {
+  padding: 10px 15px;
+  background-color: #f39848;
+  border: 0.5px solid #f07d18;
+  color: #f8f9fa;
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+.btn-secondary {
+  padding: 10px 15px;
+  background-color: #3D41C2;
+  border: 0.5px solid #31349b;
+  color: #f8f9fa;
+  cursor: pointer;
+  border-radius: 2%;
+}
+
+.fa {
+  font-size: 1.2em;
+  padding: 5px;
+  background-color: #dae0e5;
+  border-radius: 50%;
+}
+
+.haf {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+@media (min-width: 840px) {
+  .haf {
+    width: 50%;
+    padding: 20px;
+  }
+}
+
+.login-form {
+  width: 75%;
+  border: none;
+  margin: 0 auto;
+  padding: 16px 12px;
+  justify-content: center;
+}
+
+.login-form .form-group {
+  margin: 10px 0 10px 0;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.login-form .form-group input {
+  padding: 12px;
+  border: 1.5px solid #343a40;
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.login-form .form-group-submit {
+  margin-top: 50px;
+}
+
+.login-form .form-group-submit .btn {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+}
+
+@media (min-width: 840px) {
+  .login-form .form-group-submit .btn {
+    display: inline-block;
+    margin: 0;
+    text-align: left;
+  }
+}
+
+.login-form #forgot-password {
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.login-form #forgot-password:hover {
+  color: #dc3224;
+  transform: scale(1.2);
+}
+
+.login-form #forgot-password:hover::after {
+  content: ':(';
+}
+
+.slider {
+  margin: 10px;
+  overflow: hidden;
+  height: 350px;
+}
+
+.slider figure {
+  position: relative;
+  width: 400%;
+  margin: 0;
+  left: 0;
+  height: 100%;
+  animation: 25s slidy infinite;
+}
+
+.slider figure .slide {
+  width: 25%;
+  float: left;
+  height: 100%;
+}
+
+.slider figure .slide img {
+  width: 100%;
+}
+
+.slider figure .slide .des {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  15% {
+    left: 0%;
+  }
+  17% {
+    left: -100%;
+  }
+  32% {
+    left: -100%;
+  }
+  34% {
+    left: -200%;
+  }
+  49% {
+    left: -200%;
+  }
+  51% {
+    left: -300%;
+  }
+  66% {
+    left: -300%;
+  }
+  68% {
+    left: -200%;
+  }
+  83% {
+    left: -200%;
+  }
+  85% {
+    left: -100%;
+  }
+}

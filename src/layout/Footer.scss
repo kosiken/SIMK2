@@ -1,0 +1,21 @@
+
+@import '../mxins.scss';
+@import '../globals.scss';
+
+footer {
+
+  margin: 10px 0 0 0;
+  padding: 15px 5px;
+}
+
+
+#footer-logo-img{
+  width: 50px;
+  @include desktop {
+    width: 80px;
+  }
+}
+
+.list-item-footer{
+  padding: 2px;
+}

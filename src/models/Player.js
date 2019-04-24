@@ -1,5 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+
+
 //import uuid from 'uuid'
 class Player {
     constructor(firstName, lastName, rating, age, position, height, teamId, teamName, ratingSpec, assistsL = [], pointsL = [], reboundsL = [], blocksL = [], stealsL = [], id = 0, statsSpec = {
@@ -109,7 +109,7 @@ class Player {
         }
     }
 }
-exports.Player = Player;
+export default Player;
 function calcStat(ratingSpec, mins) {
     const { attackR, blockingR, passingR, reboundingR, stealsR } = ratingSpec;
     let points = Math.floor((Math.random() * mins * attackR) / 80);

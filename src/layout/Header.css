@@ -1,26 +1,84 @@
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  color: #f39848;
+}
+
+@media (min-width: 840px) {
+  .logo span {
+    margin: 0 0 0 10px;
+  }
+}
+
 #logo-img {
   width: 50px;
+}
+
+#logo-img:hover {
+  animation: .5s linear 0s bounce;
 }
 
 .nav-vert {
   display: none;
 }
 
-.spacing {
-  display: flex;
-  align-items: center;
+.nav-vert .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f9fa;
+  opacity: 0.6;
+  z-index: -999;
 }
 
-.user-div {
+.nav-vert .user-div {
   margin: 25vh 0 0 0;
   padding: 10px 50px;
 }
 
-.user-div .span {
+.nav-vert .user-div .span {
   text-decoration: underline;
   color: #f39848;
   line-height: 1.5em;
   font-weight: 600;
+}
+
+@media (min-width: 840px) {
+  .nav-vert {
+    display: block;
+    float: right;
+  }
+  .nav-vert .overlay {
+    display: none;
+  }
+  .nav-vert .user-div {
+    display: none;
+  }
+  .nav-vert .pads {
+    display: inline-block;
+    margin: 0px;
+  }
+  .nav-vert .pads ul {
+    display: inline-block;
+    margin: 0px;
+  }
+  .nav-vert .pads ul li {
+    display: inline-block;
+    padding: 0px 10px;
+  }
+  .nav-vert .pads ul li .list-item {
+    color: inherit;
+  }
+}
+
+.spacing {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .active {
@@ -31,30 +89,13 @@
 
 .visible {
   animation: 0.5s linear 0s slidein;
+  z-index: 999;
   display: block;
   position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
   width: 60vw;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #010101;
-  opacity: 0.6;
-  z-index: -999;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: -100%;
-  }
-  to {
-    margin-left: 0%;
-  }
 }
 
 nav {
@@ -64,23 +105,26 @@ nav {
 }
 
 nav ul {
+  z-index: 999;
   padding: 0;
 }
 
 nav ul li {
-  color: #f8f9fa;
+  color: #3D41C2;
+  transition: all .3s ease-in;
   padding: 10px;
 }
 
 nav ul li a {
-  color: #f8f9fa;
+  color: inherit;
 }
 
 nav ul li:hover {
-  background-color: #343a40;
+  color: #f39848;
+  transform: scale(1.2);
 }
 
-button {
+.button {
   background-color: transparent;
   border-top-style: none;
   border-right-style: none;
@@ -92,7 +136,17 @@ button {
   transition: all 0.2s linear;
 }
 
-button:hover {
+.button:hover {
   color: #f39848;
   border-color: #ee7810;
+}
+
+#toggle {
+  display: inline-block;
+}
+
+@media (min-width: 840px) {
+  #toggle {
+    display: none;
+  }
 }

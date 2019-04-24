@@ -1,0 +1,18 @@
+footer {
+  margin: 10px 0 0 0;
+  padding: 15px 5px;
+}
+
+#footer-logo-img {
+  width: 50px;
+}
+
+@media (min-width: 840px) {
+  #footer-logo-img {
+    width: 80px;
+  }
+}
+
+.list-item-footer {
+  padding: 2px;
+}

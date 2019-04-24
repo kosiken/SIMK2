@@ -1,5 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+
 class Fixture {
     constructor(home, away, veen, id, dele, sort, con, arr, score, regExp, played = false) {
         this.home = home;
@@ -45,7 +44,7 @@ class Fixture {
     play() {
         let h = this.home.sim();
         let a = this.away.sim();
-        if (h == a) {
+        if (h === a) {
             return this.play();
         }
         if (h > a) {
@@ -71,4 +70,4 @@ class Fixture {
         };
     }
 }
-exports.Fixture = Fixture;
+export default Fixture ;

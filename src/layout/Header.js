@@ -12,18 +12,20 @@ function hide() {
 }
 
 export default (color,accent,teamName='Welcome', obj = {isAuthenticated:false}) => {
-    return <header style={{backgroundColor: color, color: accent}}>
-        <div className="container">
+    return <header>
+        <div className="container"  >
             <div className="logo">
 
                 <div className="spacing">
                     <div className="logo-div">
+                        <a href="/">
                         <img id='logo-img' src={"/logo.svg"} alt="logo"/>
+                        </a>
 
                     </div>
 
-                    <span className="active">{teamName.toUpperCase()}</span>
-                    <button id="toggle" onClick={hide}>
+                     {/*<span className="active" >{teamName.toUpperCase()}</span>*/}
+                    <button className={'button'} id="toggle" onClick={hide}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="31.767" height="21.472"
                              viewBox="0 0 31.767 21.472">
                             <g id="Group_1" data-name="Group 1" transform="translate(-9)">
@@ -37,11 +39,7 @@ export default (color,accent,teamName='Welcome', obj = {isAuthenticated:false}) 
                             </g>
                         </svg>
                     </button>
-                </div>
-
-            </div>
-
-            <nav className="nav-vert" id="nav-toggle">
+                    <nav className="nav-vert" id="nav-toggle">
                 <div className="overlay"></div>
                 <div className="user-div">
                     {obj.isAuthenticated ? (<span id={obj.user.id}>{obj.user.username}</span>) : (
@@ -50,13 +48,20 @@ export default (color,accent,teamName='Welcome', obj = {isAuthenticated:false}) 
                 <div className="pads">
                     <ul className="nav-list">
                         <li className="nav-list-item">
-                            <a href="/" className="list-item">HOME</a>
+                            <a href="/" className="list-item">Home</a>
                         </li>
-                        <li className="nav-list-item"><a href="/login" className="list-item">LOGIN</a></li>
+                        <li className="nav-list-item"><a href="/login" className="list-item">Login</a></li>
                         <li className="nav-list-item"><a href="/about" className="list-item">About</a></li>
+                        <li className="nav-list-item"><a href="/about" className="list-item">Docs</a></li>
                     </ul>
                 </div>
             </nav>
+
+                </div>
+             
+            </div>
+
+
 
         </div>
     </header>

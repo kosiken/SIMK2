@@ -1,56 +1,7 @@
 // Mixins
 // Bootstrap Button Variant
-@mixin button-variant($color, $background, $border, $padding) {
-  color: $color;
-  border: none;
-
-  padding: $padding;
-
-
-  &.focus,
-  &:focus {
-    color: $color;
-    border-color: darken($border, 25%);
-
-  }
-  &:hover {
-    color: $color;
-    border-color: darken($border, 12%);
-
-  }
-  &.active,
-  &:active,
-  .open > &.dropdown-toggle {
-    color: $color;
-    border-color: darken($border, 12%);
-
-    &.focus,
-    &:focus,
-    &:hover {
-      color: $color;
-      border-color: darken($border, 25%);
-
-    }
-  }
-  &.active,
-  &:active,
-  .open > &.dropdown-toggle {
-    background-image: none;
-  }
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &.focus,
-    &:focus,
-    &:hover {
-      border-color: $border;
-
-    }
-  }
-  .badge {
-    color: $background;
-    background-color: $color;
-  }
+@mixin hoverm(){
+  transform: scale(1.2);
 }
 @mixin transition-all() {
   -webkit-transition: all 0.2s linear;
@@ -63,8 +14,15 @@
   -o-background-size: cover;
   background-size: cover;
 }
-@mixin serif-font() {
-  font-family: 'Lora', 'Times New Roman', serif;
+@mixin buton($padding, $bg, $color, $raduis) {
+
+  padding: $padding;
+  background-color: $bg;
+  border:0.5px solid darken($bg, 10%);
+  color:$color;
+  cursor: pointer;
+  border-radius: $raduis;
+
 }
 @mixin sans-serif-font() {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -92,3 +50,34 @@
   }
 
 }
+
+$desktop: 840px;
+
+@mixin desktop {
+  @media(min-width: #{$desktop}) {
+    @content;
+  }
+}
+@mixin shadow($x, $y, $blur, $color) {
+  -webkit-box-shadow: $x $y $blur $color;
+  -moz-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin linear-gradient($from, $to) {
+  /* Fallback for sad browsers */
+  background-color: $to;
+  /* Mozilla Firefox */
+  background-image:-moz-linear-gradient($from, $to);
+  /* Opera */
+  background-image:-o-linear-gradient($from, $to);
+  /* WebKit (Chrome 11+) */
+  background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, $from), colorstop(1, $to));
+  /* WebKit (Safari 5.1+, Chrome 10+) */
+  background-image: -webkit-linear-gradient($from, $to);
+  /* IE10 */
+  background-image: -ms-linear-gradient($from, $to);
+  /* W3C */
+  background-image: linear-gradient($from, $to);
+  }
+

@@ -1,5 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+
 class Team {
     constructor(teamName, teamId, short, city, abbrev, GM, coach, conferenceName, division, selected = false, next, wonTeams = [], loseTeams = [], app = 0, record = '', done = false, gamesPlayed = 0, set = new Set(), conferenceTeams = [], omy, homeFor, divisionTeams = [], otherTeams = [], fourTeams = [], players = [], lineup = [], starting = [], bench = []) {
         this.teamName = teamName;
@@ -93,7 +92,7 @@ class Team {
     }
     toJSON() {
         return {
-            $type: 'com.example.Team',
+            // $type: 'com.example.Team',
             teamName: this.teamName,
             teamId: this.teamId,
             conferenceName: this.conferenceName,
@@ -117,7 +116,7 @@ class Team {
         };
     }
 }
-exports.Team = Team;
+export default  Team;
 function starting(players) {
     const Pgraph = Object.create(null);
     startGraph(Pgraph);
@@ -136,7 +135,7 @@ function starting(players) {
             case 'SF':
                 Pgraph['SF'].push(player);
                 break;
-            case 'PG':
+            default:
                 Pgraph['PG'].push(player);
                 break;
         }

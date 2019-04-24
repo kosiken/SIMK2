@@ -1,5 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+
+
 class Conference {
     constructor(name, teams, allStars) {
         this.name = name;
@@ -27,4 +27,4 @@ class Conference {
         });
     }
 }
-exports.Conference = Conference;
+export default Conference;

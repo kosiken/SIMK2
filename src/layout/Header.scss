@@ -2,32 +2,96 @@
 @import '../mxins.scss';
 
 @import '../globals.scss';
+header {
+  display: flex;
+ align-items: center;
+ padding: 10px ;
 
 
-
-#logo-img{
-  width:50px;
 }
+.logo{
+    color: $accent;
+   
+  @include desktop {
+   
+    span{
+      margin: 0 0 0 10px;
+    }
+  }
+}
+#logo-img{
+
+  width:50px;
+  &:hover{
+    animation: .5s linear 0s bounce;
+  }
+
+}
+
 .nav-vert{
   display: none;
+
+  .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $light;
+    opacity: 0.6;
+    z-index: -999;
+  }
+  .user-div {
+    margin: 25vh 0 0 0;
+    padding: 10px 50px;
+    .span {
+      text-decoration: underline;
+      color: $accent;
+      line-height: 1.5em;
+      font-weight: 600;
+    }
+  }
+
+  @include desktop {
+    display: block;
+    float:right;
+  
+
+
+    .overlay {
+      display:none;
+    }
+    .user-div{
+      display: none;
+    }
+    .pads {
+      display: inline-block;
+      margin: 0px;
+      ul{
+        display: inline-block;
+        margin: 0px;
+        li{
+
+          display: inline-block;
+          padding:0px 10px;
+         .list-item{
+          color: inherit;
+        
+
+
+        }
+      }}
+    }
+  }
 }
 .spacing{
   display: flex;
 
   align-items: center;
 
+justify-content: space-around;
+
 
 }
-.user-div {
-  margin: 25vh 0 0 0;
-  padding: 10px 50px;
-  .span {
-    text-decoration: underline;
-    color: $accent;
-    line-height: 1.5em;
-    font-weight: 600;
-  }
-}
+
 .active{
   margin: 0 auto;
   font-size: 1.2em;
@@ -35,56 +99,53 @@
 }
 .visible {
   animation: 0.5s linear 0s slidein;
-
+  z-index: 999;
   display: block;
   position: fixed;
   left:0;top:0;
   height: 100vh;
   width: 60vw}
 
-.overlay{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #010101;
-  opacity: 0.6;
-  z-index: -999;
-}
 
-@keyframes slidein {
-  from {
-    margin-left: -100%;
 
-  }
 
-  to {
-    margin-left: 0%;
-
-  }
-}
 
 nav{
   @include transition-all();
 
-  ul{
+  ul{  z-index: 999;
+
     padding: 0;
     li{
-      color:$light;
+      color:$cyan;
+
+      transition: all .3s ease-in;
       padding: 10px;
 
       a{
-        color: $light;
+        color: inherit;
       }&:hover{
-             background-color: $dark;
+           color: $accent;
+           transform: scale(1.2);
              }
     }
   }
 }
 
-button{
+.button{
   @include btn(8px, $accent);
 
   @include transition-all()
 
 
 }
+
+#toggle {
+  display: inline-block;
+
+
+  @include desktop{
+    display: none;
+  }
+}
+

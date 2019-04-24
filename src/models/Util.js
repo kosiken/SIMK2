@@ -1,9 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const Player_1 = require("./Player");
-const Team_1 = require("./Team");
-const Fixture_1 = require("./Fixture");
-const Conference_1 = require("./Conference");
+//"use strict";
+
+import Player from './Player'
+import Team from'./Team'
+import Fixture from './Fixture'
+import Conference from './Conference'
 //import { IncomingMessage } from "http";
 function getTeam(k, t) {
     return t.find(x => k === x.teamName || k === x.short || k === x.abbrev);
@@ -22,8 +22,8 @@ class Util {
                 .then((response) => {
                 teams = response.data;
                 cb({
-                    teams: teams.map(({ teamName, teamId, short, city, abbrev, GM, coach, conferenceName, division }) => new Team_1.Team(teamName, teamId, short, city, abbrev, GM, coach, conferenceName, division)),
-                    players: players.map(({ firstName, lastName, rating, age, position, height, teamId, teamName, ratingSpec }) => new Player_1.Player(firstName, lastName, rating, age, position, height, teamId, teamName, ratingSpec))
+                    teams: teams.map(({ teamName, teamId, short, city, abbrev, GM, coach, conferenceName, division }) => new Team(teamName, teamId, short, city, abbrev, GM, coach, conferenceName, division)),
+                    players: players.map(({ firstName, lastName, rating, age, position, height, teamId, teamName, ratingSpec }) => new Player(firstName, lastName, rating, age, position, height, teamId, teamName, ratingSpec))
                 });
             });
         });
@@ -109,12 +109,12 @@ class Util {
         PlayerList.map(player => { player.putTeam(TeamList); });
         TeamList.map(i => { i.configureMins(); });
         return {
-            Western: new Conference_1.Conference('West', TeamList.filter((team) => team.conferenceName === 'West')),
-            Eastern: new Conference_1.Conference('East', TeamList.filter((team) => team.conferenceName === 'East'))
+            Western: new Conference('West', TeamList.filter((team) => team.conferenceName === 'West')),
+            Eastern: new Conference('East', TeamList.filter((team) => team.conferenceName === 'East'))
         };
     }
 }
-exports.Util = Util;
+export default Util;
 /*
 * @param {Array<any>} fixArr - This is the Fixtures Array
 * */
@@ -160,19 +160,19 @@ function finallyPopulateFixtureArray(fixturesArray, teamList, count) {
     let three = [], deletingSet;
     teamList.forEach((x, n) => {
         x.omy.map(i => getTeam(i, teamList)).forEach(ot => {
-            three.push(new Fixture_1.Fixture(x, ot, count++));
-            three.push(new Fixture_1.Fixture(x, ot, count++));
+            three.push(new Fixture(x, ot, count++));
+            three.push(new Fixture(x, ot, count++));
         });
         x.otherTeams.map(i => getTeam(i, teamList)).forEach(ot => {
-            fixturesArray.push(new Fixture_1.Fixture(x, ot, count++));
+            fixturesArray.push(new Fixture(x, ot, count++));
         });
         x.fourTeams.map(i => getTeam(i, teamList)).forEach(ot => {
-            fixturesArray.push(new Fixture_1.Fixture(x, ot, count++));
-            fixturesArray.push(new Fixture_1.Fixture(x, ot, count++));
+            fixturesArray.push(new Fixture(x, ot, count++));
+            fixturesArray.push(new Fixture(x, ot, count++));
         });
         x.divisionTeams.map(i => getTeam(i, teamList)).forEach(ot => {
-            fixturesArray.push(new Fixture_1.Fixture(x, ot, count++));
-            fixturesArray.push(new Fixture_1.Fixture(x, ot, count++));
+            fixturesArray.push(new Fixture(x, ot, count++));
+            fixturesArray.push(new Fixture(x, ot, count++));
         });
     });
     deletingSet = new Set(three.map(i => i.id));
