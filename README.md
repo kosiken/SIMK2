@@ -1,5 +1,9 @@
 # SIMK2
 
+
+![CLANG](public/logo.svg)
+
+
 Just a simple season simulator
 
 - [Front End Docs](#front-end)
