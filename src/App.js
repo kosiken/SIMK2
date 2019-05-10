@@ -27,8 +27,7 @@ class App extends Component {
         return (
             <React.Fragment>
             {Header(bg, color, teamName, isAuthenticated)}
-             <League/>
-            {/*{isAuthenticated? (<League/>): Home(this.state.server, isDev, isAuthenticated) }*/}
+             {/*  <League/>          {isAuthenticated? (<League/>): Home(this.state.server, isDev, isAuthenticated) }*/}
 
 
 
