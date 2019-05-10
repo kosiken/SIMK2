@@ -327,8 +327,8 @@ Holds the properties of the  [Player](#player) stored in it
 - [Util](#util)
 - [Conference](#conference)
 - [Fixture](#fixture)
-- [Team](#teamt)
-- [Player Component](#player-component)
+- [Team](#team)
+- [Player](#player)
 
 ## Util
 
