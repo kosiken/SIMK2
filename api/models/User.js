@@ -1,5 +1,5 @@
 const {Schema, model} = require('mongoose');
-
+const uuid = require ("uuid")
 const UserSchema = new Schema({
     username:{
         type: String,
@@ -13,8 +13,19 @@ const UserSchema = new Schema({
         type: String,
         required:true
     },
-    leagues: [{type: Schema.Types.ObjectId}]
+    leagues: [{type: Schema.Types.ObjectId}],
+    created: {
+        type:Date,
+        required: true
+    }
 });
 
 
-module.exports = model('user',  UserSchema);
+const Session = new Schema({
+    user:{type: Schema.Types.ObjectId,required: true},
+    key: {type: String, default: uuid()},
+    created: {type: Date, default:Date.now()}
+});
+
+module.exports.User = model('user',  UserSchema);
+module.exports.Session = model('session', Session);

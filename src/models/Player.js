@@ -48,6 +48,7 @@ class Player {
     }
     putTeam(Teamlist) {
         Teamlist.find(o => o.getTeamId === this.teamId).players.push(this);
+
     }
     get getRating() {
         return this.rating;
@@ -94,7 +95,12 @@ class Player {
                 rebounds: this.rebounds,
                 assists: this.assists,
                 steals: this.steals,
-                blocks: this.blocks
+                blocks: this.blocks,
+                boxScore: {player: this.lastName, points: this.points,
+                    rebounds: this.rebounds,
+                    assists: this.assists,
+                    steals: this.steals,
+                    blocks: this.blocks }
             };
             //  console.log( this.points );
         }
@@ -104,7 +110,12 @@ class Player {
                 rebounds: 0,
                 assists: 0,
                 steals: 0,
-                blocks: 0
+                blocks: 0,
+                boxScore: {player: this.lastName, points: 0,
+                    rebounds: 0,
+                    assists: 0,
+                    steals: 0,
+                    blocks: 0 }
             };
         }
     }

@@ -11,21 +11,21 @@ function hide() {
 
 }
 
-export default (color,accent,teamName='Welcome', obj = {isAuthenticated:false}) => {
+export default (color,accent,teamName='Welcome', isAuthenticated) => {
     return <header>
         <div className="container"  >
             <div className="logo">
 
-                <div className="spacing">
-                    <div className="logo-div">
+                <div className="spacin">
+
                         <a href="/">
                         <img id='logo-img' src={"/logo.svg"} alt="logo"/>
                         </a>
 
-                    </div>
+
 
                      {/*<span className="active" >{teamName.toUpperCase()}</span>*/}
-                    <button className={'button'} id="toggle" onClick={hide}>
+                    <button className={'button'} id="toggle" onClick={hide} style={{float:'right'}}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="31.767" height="21.472"
                              viewBox="0 0 31.767 21.472">
                             <g id="Group_1" data-name="Group 1" transform="translate(-9)">
@@ -42,7 +42,7 @@ export default (color,accent,teamName='Welcome', obj = {isAuthenticated:false}) 
                     <nav className="nav-vert" id="nav-toggle">
                 <div className="overlay"></div>
                 <div className="user-div">
-                    {obj.isAuthenticated ? (<span id={obj.user.id}>{obj.user.username}</span>) : (
+                    {isAuthenticated ? (<span id={'pill'}>Logged IN</span>) : (
                         <a href="/login" className="span">You are not logged in</a>)}
                 </div>
                 <div className="pads">

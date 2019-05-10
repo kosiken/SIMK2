@@ -15,7 +15,7 @@ class Team {
         this.wonTeams = wonTeams;
         this.loseTeams = loseTeams;
         this.app = app;
-        this.record = record;
+        this.record = record||'0.00';
         this.done = done;
         this.gamesPlayed = gamesPlayed;
         this.set = set;
@@ -30,6 +30,7 @@ class Team {
         this.starting = starting;
         this.bench = bench;
         this.omy = omy !== undefined ? omy : [];
+        this.ratings ={}
     }
     rec() {
         if (this.gamesPlayed === 0) {
@@ -49,6 +50,19 @@ class Team {
     get getTeamId() {
         return this.teamId;
     }
+
+    reconfigMins () {
+        let mins = 48 * 5;
+        this.players.sort((a, b)=> b.rating-a.rating)
+        this.players.forEach(x => {
+            let min = setP(x, mins);
+            if (min > -1)
+                mins -= min;
+            // else { console.log(`${x.name} DNP ${x.rating}`) }
+            // console.log(mins);
+        });
+        console.log(this.lineup.map(p =>{return {mins: p.mins,     player: p.rating}}))
+    }
     configureMins() {
         this.lineup = starting(this.players).starters;
         this.lineup.forEach(x => {
@@ -63,7 +77,24 @@ class Team {
             // else { console.log(`${x.name} DNP ${x.rating}`) }
             // console.log(mins);
         });
+
+
+
+        let playersMapAttack = this.players.map(playe => {
+            let {ratingSpec: {attackR}} =playe
+            return attackR
+        })
+        let playersMapDefense = this.players.map(playe => {
+            let {ratingSpec: { defenseR}} =playe
+            return defenseR
+        })
+        this.ratings.attack =  Math.ceil(playersMapAttack.reduce((c, p) =>c+p )/this.players.length)
+        this.ratings.defense =  Math.ceil(playersMapDefense.reduce((c, p) =>c+p )/this.players.length)
+
         //
+    }
+    getPlayer (playerName) {
+        return this.players.find (pl=> pl.firstName + pl.lastName === playerName)
     }
     win(t) {
         this.wonTeams.unshift(t.short);
@@ -78,7 +109,7 @@ class Team {
     update() {
         this.record = (this.wonTeams.length / this.gamesPlayed).toFixed(3);
     }
-    sim() {
+    sim(ratings) {
         let points = 0;
         this.players.forEach(x => {
             if (x.mins > -1) {
@@ -89,6 +120,27 @@ class Team {
             }
         });
         return points;
+    }
+    playering(rating ) {
+        let points=0 , assists=0, rebounds=0, boxScores =[], stats
+        this.players.forEach(x => {
+            if (x.mins > -1) {
+               stats =  x.playing(rating)
+                points += stats.points;
+                assists +=stats.assists;
+                rebounds +=stats.rebounds
+                boxScores.push(stats.boxScore)
+            }
+            else {
+                points = points + 0;
+                boxScores.push({player: x.lastName, points: 0,
+                    rebounds: 0,
+                    assists: 0,
+                    steals: 0,
+                    blocks: 0 })
+            }
+        });
+        return {points, rating, rebounds, boxScores}
     }
     toJSON() {
         return {

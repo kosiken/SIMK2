@@ -82,14 +82,13 @@ header {
     }
   }
 }
-.spacing{
-  display: flex;
+.spacing {
+  display: block;
+  @include desktop {
+    display: flex;
 
-  align-items: center;
-
-justify-content: space-around;
-
-
+    justify-content: space-around;
+  }
 }
 
 .active{

@@ -36,11 +36,12 @@ class Util {
         const { Western: west, Eastern: east } = teamConferenceObject;
         const TeamMap = Object.create(null);
         let teamList = west.teams.concat(east.teams);
-        let fixturesArray = [];
+        const fixturesArray = [];
         createTeamMap(TeamMap, teamList);
         configureTeamFixturesConference(TeamMap, teamList, fixturesArray);
-        finallyPopulateFixtureArray(fixturesArray, teamList, 0);
-        return fixturesArray;
+
+      return  finallyPopulateFixtureArray( teamList, 0);
+
     }
     generateFixturesMap(fixturesArray) {
         const FixtureMap = Object.create(null);
@@ -64,7 +65,7 @@ class Util {
         }
         let fee = fixturesArray.map(x => x).reverse();
         for (let b in FixtureMap) {
-            fee.forEach((x, i) => {
+            fee.forEach((x) => {
                 if (FixtureMap[b].den.length < 15) {
                     if (!FixtureMap[b].og.has(x.home.abbrev) && !FixtureMap[b].og.has(x.away.abbrev)) {
                         FixtureMap[b].gear(x);
@@ -78,17 +79,23 @@ class Util {
             FixtureMap[parseInt(x)].peel(FixtureMap[parseInt(x)].den);
             fixtures.push(...FixtureMap[parseInt(x)].den);
         });
+       fixtures.forEach(fix=> {
+           fix.inFixArr =  true
+       })
+
+        fixtures = fixtures.concat(fixturesArray.filter(fix=> !fix.inFixArr))
         return { fixtureMap: FixtureMap, fixtures: fixtures };
     }
     formatPosition(position) {
         let arr = position.split('');
         let [num1, num2] = arr;
         if (num2) {
-            return num1 + format(num2);
+            return num1 + format(num2, num1);
         }
         return format(num1);
-        function format(num) {
+        function format(num, numb) {
             let ans;
+            if (numb==='1') return num+'th'
             switch (num) {
                 case '1':
                     ans = num + 'st';
@@ -101,8 +108,11 @@ class Util {
                     break;
                 default:
                     ans = num + 'th';
-                    return ans;
+                    break;
+
+
             }
+            return ans;
         }
     }
     populateConferencesAndTeams(TeamList, PlayerList) {
@@ -112,6 +122,18 @@ class Util {
             Western: new Conference('West', TeamList.filter((team) => team.conferenceName === 'West')),
             Eastern: new Conference('East', TeamList.filter((team) => team.conferenceName === 'East'))
         };
+    }
+
+
+
+    getNextFixture (fixturesArray) {
+        return fixturesArray.find(fixture => fixture.home.selected|| fixture.away.selected && !fixture.played)
+    }
+
+
+    getTeamFixture(fixturesArray) {
+        let index = fixturesArray.findIndex(fixture => fixture.home.selected|| fixture.away.selected)
+        return  fixturesArray.slice(0, index+1)
     }
 }
 export default Util;
@@ -126,7 +148,7 @@ function createTeamMap(teamMap, teamList) {
             };
     });
 }
-function configureTeamFixturesConference(teamMap, teamList, fixturearray) {
+function configureTeamFixturesConference(teamMap, teamList) {
     let limiter = 0;
     //let build = {}
     Object.keys(teamMap).forEach(x => {
@@ -156,9 +178,11 @@ function configureTeamFixturesConference(teamMap, teamList, fixturearray) {
         i.divisionTeams = teamMap[i.division].divisionTeams.filter((o) => o !== i.short);
     });
 }
-function finallyPopulateFixtureArray(fixturesArray, teamList, count) {
+function finallyPopulateFixtureArray( teamList, count) {
+    let fixturesArray = []
+
     let three = [], deletingSet;
-    teamList.forEach((x, n) => {
+    teamList.forEach((x) => {
         x.omy.map(i => getTeam(i, teamList)).forEach(ot => {
             three.push(new Fixture(x, ot, count++));
             three.push(new Fixture(x, ot, count++));
@@ -180,11 +204,12 @@ function finallyPopulateFixtureArray(fixturesArray, teamList, count) {
         three.filter(f => f.regExp.test(i))[0].sime();
     });
     fixturesArray = fixturesArray.concat(three.filter(f => !f.dele));
+
+    return fixturesArray
     //fixturesArray = fixturesArray.concat(three.concat(four))
-    // console.log( fixturesArray.length)
+
 }
-class TeamError extends Error {
-}
+
 /*
 * @throws TeamError
 * */

@@ -42,8 +42,12 @@ class Fixture {
         this.score = { home: a, away: b };
     }
     play() {
-        let h = this.home.sim();
-        let a = this.away.sim();
+        let {points: h, assists: ha, boxScores:hb} = this.home.playering(this.home.ratings);
+        let {points: a, boxScores: ab}= this.away.playering(this.away.ratings);
+
+
+
+
         if (h === a) {
             return this.play();
         }
@@ -56,7 +60,9 @@ class Fixture {
             this.away.win(this.home);
         }
         this.score = { home: h, away: a };
+
         this.played = true;
+        this.boxScore = {home:hb, away:ab}
         return;
     }
     toJSON() {

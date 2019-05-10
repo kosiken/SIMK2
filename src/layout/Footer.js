@@ -9,7 +9,7 @@ export default (params) => {
                     <div className="footer-logo">
                         <img src={logo} alt="" id="footer-logo-img"/><br/>
                         <span className="accent">SIMK 2.0</span>&nbsp;
-                        <small className="black">&copy; 2019 KRC MEDIA</small>
+                        <small className="secondary">&copy; 2019 KRC MEDIA</small>
                     </div>
                     <div className="list">
                         <nav>
@@ -23,8 +23,8 @@ export default (params) => {
                     </div>
                     
                 </div>
-                <hr className="black" style={{width:'60%', margin:'10px auto'}}/>
-                <p style={{textAlign:'center'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias, animi culpa cupiditate deleniti,
+                <hr className={'secondary'} style={{width:'60%', margin:'10px auto'}}/>
+                <p className={'secondary'} style={{textAlign:'center'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias, animi culpa cupiditate deleniti,
                     .</p>
             </div>
         </footer>

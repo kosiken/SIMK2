@@ -1,0 +1,14 @@
+.played {
+   animation:  .5s linear 0s appear;
+}
+
+@keyframes appear {
+    from{
+
+        opacity: 0;
+    }
+    to {
+
+        opacity: 1;
+    }
+}

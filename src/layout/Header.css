@@ -76,9 +76,14 @@ header {
 }
 
 .spacing {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: block;
+}
+
+@media (min-width: 840px) {
+  .spacing {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .active {
@@ -110,7 +115,7 @@ nav ul {
 }
 
 nav ul li {
-  color: #3D41C2;
+  color: #fff;
   transition: all .3s ease-in;
   padding: 10px;
 }

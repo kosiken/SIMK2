@@ -6,7 +6,7 @@ edge
 Publish
 .idea
 /.idea
-*.scss
+
 
 *.user
 *.suo
@@ -30,6 +30,8 @@ local.settings.json
 /tests
 /package.lock.json
 node_modules
-/lib/models/models.test.js
+/lib
 /.vscode
 /package-lock.json
+/leagues
+/.env
