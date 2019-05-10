@@ -1,4 +1,4 @@
-# SIMK2 [build](https://travis-ci.com/kosiken/SIMK2.svg?branch=master)
+# SIMK2 ![build](https://travis-ci.com/kosiken/SIMK2.svg?branch=master)
 
 
 ![CLANG](public/logo.svg)
