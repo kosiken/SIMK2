@@ -1,6 +1,6 @@
 
 class Team {
-    constructor(teamName, teamId, short, city, abbrev, GM, coach, conferenceName, division, selected = false, next, wonTeams = [], loseTeams = [], app = 0, record = '', done = false, gamesPlayed = 0, set = new Set(), conferenceTeams = [], omy, homeFor, divisionTeams = [], otherTeams = [], fourTeams = [], players = [], lineup = [], starting = [], bench = []) {
+    constructor(teamName, teamId, short, city, abbrev, GM, coach, conferenceName, division, urlPic, selected = false, next, wonTeams = [], loseTeams = [], app = 0, record = '', done = false, gamesPlayed = 0, set = new Set(), conferenceTeams = [], omy, homeFor, divisionTeams = [], otherTeams = [], fourTeams = [], players = [], lineup = [], starting = [], bench = []) {
         this.teamName = teamName;
         this.teamId = teamId;
         this.short = short;
@@ -14,6 +14,7 @@ class Team {
         this.next = next;
         this.wonTeams = wonTeams;
         this.loseTeams = loseTeams;
+        this.urlPic = urlPic;
         this.app = app;
         this.record = record||'0.00';
         this.done = done;

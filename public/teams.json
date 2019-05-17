@@ -7,7 +7,8 @@
     "GM": "Colleen McLaughlin",
     "coach": "Ben Blanda",
     "conferenceName": "West",
-    "division": "South West"
+    "division": "South West",
+    "urlPic": "/bullies.svg"
 }, {
     "teamName": "Dinamouth Knights",
     "teamId": 55745117,
@@ -17,7 +18,8 @@
     "GM": "Carl Berge",
     "coach": "Nash Bartoletti",
     "conferenceName": "West",
-    "division": "South West"
+    "division": "South West",
+    "urlPic": "/foxes.svg"
 }, {
     "teamName": "Lempihaven Sharks",
     "teamId": 55745118,
@@ -27,7 +29,8 @@
     "GM": "Mark Zboncak",
     "coach": "Angus Hagenes",
     "conferenceName": "West",
-    "division": "South West"
+    "division": "South West",
+    "urlPic": "/knits.svg"
 }, {
     "teamName": "Philipmouth Lions",
     "teamId": 55745119,
@@ -37,7 +40,8 @@
     "GM": "VanHeising Mayert",
     "coach": "Marco Herman",
     "conferenceName": "West",
-    "division": "South West"
+    "division": "South West",
+    "urlPic": "/money.svg"
 }, {
     "teamName": "Darrionfurt Bullies",
     "teamId": 55745120,
@@ -47,7 +51,8 @@
     "GM": "Maddison Bernhard",
     "coach": "Sarai Reilly",
     "conferenceName": "West",
-    "division": "South West"
+    "division": "South West",
+    "urlPic": "/light.svg"
 }, {
     "teamName": "Simeonberg Pumas",
     "teamId": 55745121,
@@ -57,7 +62,8 @@
     "GM": "Cesar Dietrich",
     "coach": "Chloe Cartwright",
     "conferenceName": "West",
-    "division": "North West"
+    "division": "North West",
+    "urlPic": "/phillions.svg"
 }, {
     "teamName": "Salvatoremouth Ice",
     "teamId": 55745122,
@@ -67,7 +73,8 @@
     "GM": "Winnifred Moen",
     "coach": "Isabell Mills",
     "conferenceName": "West",
-    "division": "North West"
+    "division": "North West",
+    "urlPic": "/s67ers.svg"
 }, {
     "teamName": "Jimmyfort Bulldogs",
     "teamId": 55745123,
@@ -77,7 +84,8 @@
     "GM": "Jovani Rodriguez",
     "coach": "Louvenia Lind",
     "conferenceName": "West",
-    "division": "North West"
+    "division": "North West",
+    "urlPic": "/bullies.svg"
 }, {
     "teamName": "Dorotheaville Rapids",
     "teamId": 55745124,
@@ -87,7 +95,8 @@
     "GM": "Stacy Ratke",
     "coach": "Cierra Bogisich",
     "conferenceName": "West",
-    "division": "North West"
+    "division": "North West",
+    "urlPic": "/foxes.svg"
 }, {
     "teamName": "Aimeeside Lightning",
     "teamId": 55745125,
@@ -97,7 +106,8 @@
     "GM": "Micheal Dicki",
     "coach": "Frederic Keeling",
     "conferenceName": "West",
-    "division": "North West"
+    "division": "North West",
+    "urlPic": "/knits.svg"
 }, {
     "teamName": "Michalemouth Light",
     "teamId": 55745126,
@@ -107,7 +117,8 @@
     "GM": "Crystal Jakubowski",
     "coach": "Jerrold Kemmer",
     "conferenceName": "West",
-    "division": "Central West"
+    "division": "Central West",
+    "urlPic": "/money.svg"
 }, {
     "teamName": "Sophieshire Scorchers",
     "teamId": 55745127,
@@ -117,7 +128,8 @@
     "GM": "Brown Aufderhar",
     "coach": "Kaleigh Mertz",
     "conferenceName": "West",
-    "division": "Central West"
+    "division": "Central West",
+    "urlPic": "/light.svg"
 }, {
     "teamName": "Elmerchester Wolves",
     "teamId": 55745128,
@@ -127,7 +139,8 @@
     "GM": "Asha Bosco",
     "coach": "Johnathon Bernhard",
     "conferenceName": "West",
-    "division": "Central West"
+    "division": "Central West",
+    "urlPic": "/phillions.svg"
 }, {
     "teamName": "Francisside Runners",
     "teamId": 55745129,
@@ -137,7 +150,8 @@
     "GM": "Luis Rice",
     "coach": "Luciano Langosh",
     "conferenceName": "West",
-    "division": "Central West"
+    "division": "Central West",
+    "urlPic": "/s67ers.svg"
 }, {
     "teamName": "Melodyfort Ballers",
     "teamId": 55745130,
@@ -147,7 +161,8 @@
     "GM": "Brent Lubowitz",
     "coach": "Katelyn McClure",
     "conferenceName": "West",
-    "division": "Central West"
+    "division": "Central West",
+    "urlPic": "/bullies.svg"
 }, {
     "teamName": "Furmantown Money",
     "teamId": 55745131,
@@ -157,7 +172,8 @@
     "GM": "George Kris",
     "coach": "Omer Cassin",
     "conferenceName": "East",
-    "division": "South East"
+    "division": "South East",
+    "urlPic": "/foxes.svg"
 }, {
     "teamName": "Reidchester Rockies",
     "teamId": 55745132,
@@ -167,7 +183,8 @@
     "GM": "Cordelia Kuhn",
     "coach": "Woodrow D'Amore",
     "conferenceName": "East",
-    "division": "South East"
+    "division": "South East",
+    "urlPic": "/knits.svg"
 }, {
     "teamName": "Bruceberg Sizzle",
     "teamId": 55745133,
@@ -177,7 +194,8 @@
     "GM": "Alden Wuckert",
     "coach": "Michale Schroeder",
     "conferenceName": "East",
-    "division": "South East"
+    "division": "South East",
+    "urlPic": "/money.svg"
 }, {
     "teamName": "Mireilleberg Leopards",
     "teamId": 55745134,
@@ -187,7 +205,8 @@
     "GM": "Abel Schamberger",
     "coach": "Richard Johnston",
     "conferenceName": "East",
-    "division": "South East"
+    "division": "South East",
+    "urlPic": "/light.svg"
 }, {
     "teamName": "Lailachester Dealers",
     "teamId": 55745135,
@@ -197,7 +216,8 @@
     "GM": "Amara Bernier",
     "coach": "Samara Schaden",
     "conferenceName": "East",
-    "division": "South East"
+    "division": "South East",
+    "urlPic": "/phillions.svg"
 }, {
     "teamName": "Olaffort Wasps",
     "teamId": 55745136,
@@ -207,7 +227,8 @@
     "GM": "Santiago Cronin",
     "coach": "Jensen Carter",
     "conferenceName": "East",
-    "division": "North East"
+    "division": "North East",
+    "urlPic": "/s67ers.svg"
 }, {
     "teamName": "Turnerchester Foxes",
     "teamId": 55745137,
@@ -217,7 +238,8 @@
     "GM": "Otis Stokes",
     "coach": "Zack Conroy",
     "conferenceName": "East",
-    "division": "North East"
+    "division": "North East",
+    "urlPic": "/bullies.svg"
 }, {
     "teamName": "Billville 67ers",
     "teamId": 55745138,
@@ -227,7 +249,8 @@
     "GM": "Wilson Larson",
     "coach": "Deborah Stoltenberg",
     "conferenceName": "East",
-    "division": "North East"
+    "division": "North East",
+    "urlPic": "/foxes.svg"
 }, {
     "teamName": "Arneport Blues",
     "teamId": 55745139,
@@ -237,7 +260,8 @@
     "GM": "Donna Bernhard",
     "coach": "Magnolia Vandervort",
     "conferenceName": "East",
-    "division": "North East"
+    "division": "North East",
+    "urlPic": "/knits.svg"
 }, {
     "teamName": "Randalchester Reds",
     "teamId": 55745140,
@@ -247,7 +271,8 @@
     "GM": "Fabiola O'Hara",
     "coach": "Kara Ziemann",
     "conferenceName": "East",
-    "division": "North East"
+    "division": "North East",
+    "urlPic": "/money.svg"
 }, {
     "teamName": "Garrickside Matadors",
     "teamId": 55745141,
@@ -257,7 +282,8 @@
     "GM": "Hortense Mayert",
     "coach": "Ian Bruen",
     "conferenceName": "East",
-    "division": "Central East"
+    "division": "Central East",
+    "urlPic": "/light.svg"
 }, {
     "teamName": "Carolanneville Knits",
     "teamId": 55745142,
@@ -267,7 +293,8 @@
     "GM": "Dorcas Kuphal",
     "coach": "Jerrell Beer",
     "conferenceName": "East",
-    "division": "Central East"
+    "division": "Central East",
+    "urlPic": "/phillions.svg"
 }, {
     "teamName": "Anselburgh Rivers",
     "teamId": 55745143,
@@ -277,7 +304,8 @@
     "GM": "Marge Feil",
     "coach": "Watson Schiller",
     "conferenceName": "East",
-    "division": "Central East"
+    "division": "Central East",
+    "urlPic": "/s67ers.svg"
 }, {
     "teamName": "Edisonshire Brewers",
     "teamId": 55745144,
@@ -287,7 +315,8 @@
     "GM": "Antonette Bashirian",
     "coach": "Fleta Champlin",
     "conferenceName": "East",
-    "division": "Central East"
+    "division": "Central East",
+    "urlPic": "/bullies.svg"
 }, {
     "teamName": "Coryhaven Stars",
     "teamId": 55745145,
@@ -297,5 +326,6 @@
     "GM": "Tyler O'Keefe",
     "coach": "Burley Powlowski",
     "conferenceName": "East",
-    "division": "Central East"
+    "division": "Central East",
+    "urlPic": "/foxes.svg"
 }]

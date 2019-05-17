@@ -49,7 +49,8 @@ componentDidMount() {
         let leagues = localStorage.getItem('league')||false
         let value =  localStorage.getItem('selected')||false, selectTeam
         !value? selectTeam = '': selectTeam=this.util.getTeam(value, teams)
-        selectTeam.selected = true
+    if(typeof selectTeam!=='string')    selectTeam.selected = true
+console.log(teams.map(p=> p.urlPic), teams[0]);
 
         this.setState({teams: teams, players: players, conferences: ConfObj,
         selectTeam : selectTeam,

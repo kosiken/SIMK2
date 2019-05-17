@@ -22,7 +22,7 @@ class Util {
                 .then((response) => {
                 teams = response.data;
                 cb({
-                    teams: teams.map(({ teamName, teamId, short, city, abbrev, GM, coach, conferenceName, division }) => new Team(teamName, teamId, short, city, abbrev, GM, coach, conferenceName, division)),
+                    teams: teams.map(({ teamName, teamId, short, city, abbrev, GM, coach, conferenceName, division, urlPic }) => new Team(teamName, teamId, short, city, abbrev, GM, coach, conferenceName, division,urlPic)),
                     players: players.map(({ firstName, lastName, rating, age, position, height, teamId, teamName, ratingSpec }) => new Player(firstName, lastName, rating, age, position, height, teamId, teamName, ratingSpec))
                 });
             });

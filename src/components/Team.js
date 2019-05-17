@@ -170,7 +170,7 @@ removeAnItem = (arr, nam) => {
     }
 
     render() {
-          let { teamName, teamId, short, city,  GM, coach, conferenceName, division ,lineup,bench, record, wonTeams, loseTeams, players} = this.state.team;
+          let { teamName, teamId, short, city,  GM, coach, conferenceName, division ,lineup,bench, record, wonTeams, loseTeams, players, urlPic} = this.state.team;
         let top
         if (this.props.fixtureView) {
 
@@ -220,7 +220,7 @@ removeAnItem = (arr, nam) => {
               return (
                   <tr>
                       <td>{this.props.position +1}</td>
-                      <td>   <span className="meta" style={{color:'#dc3a3a', fontSize:'1.5em'}}><i className="fas fa-dragon"></i></span> <span className="meta">{teamName}</span></td>
+                      <td>   <img className="team-logo-img" style={{width:'50px'}} src={'./' + urlPic} />     <span className="meta">{teamName}</span></td>
                       <td>{record}</td>
                       <td>{wonTeams.length.toString()}</td>
                       <td>{loseTeams.length.toString()}</td>
@@ -235,7 +235,7 @@ removeAnItem = (arr, nam) => {
                       <span className=" meta"><i className="far fa-chart-bar"></i>{record===''? 'Record: 0.00 Won: 0 Lost:0': `Record: ${record} W:${wonTeams.length} L:${loseTeams.length}`}</span>
                   </div>
                   <div className="team-info">
-                      <span className="meta" style={{color:'#dc3a3a', fontSize:'1.5em'}}><i className="fas fa-dragon"></i></span>
+                  <img className="team-logo-img" style={{width:'50px'}} src={'./' + urlPic} />  
 
                   </div>
                       <div className="something-sha">
@@ -254,7 +254,7 @@ removeAnItem = (arr, nam) => {
                     <div className="team-info">
                         <div className="container">
                             <div className="spacin ">
-                                <span className="meta" style={{color:'#dc3a3a', fontSize:'1.5em'}}><i className="fas fa-dragon"></i></span>
+                            <img className="team-logo-img" style={{width:'50px'}} src={'./' + urlPic} />  
                                 <span className=" meta" >{teamName}</span>
                                 <span className=" meta"><i className="far fa-chart-bar"></i>{record===''? 'Record: 0.00 Won: 0 Lost:0': `Record: ${record} W:${wonTeams.length} L:${loseTeams.length}`}</span>
                                 <span className={' meta'}>{this.props.getPosition(short, conferenceName)}</span>

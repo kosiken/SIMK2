@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="249.022" height="239.881" viewBox="0 0 249.022 239.881">
+  <g id="light" transform="translate(150.212)">
+    <circle id="circle7540" transform="translate(98.81 7.194)" fill="#fff"/>
+    <path id="path878" fill="aqua" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.762"/>
+    <g id="g1165" transform="translate(-147.831 12.074)">
+      <path id="path1124" d="M-26.088,170.574q-4.185,0-8.362.274l84.373,65.837-57.5,83.566,50.919,55.462c32.719-21.031,52.256-55.55,52.313-92.426,0-62.25-54.506-112.713-121.743-112.713Zm-21.23,1.752c-58.132,9.531-100.5,56.3-100.513,110.961C-147.831,345.537-93.325,396-26.088,396a129.572,129.572,0,0,0,57.249-13.338l-82.726-58.113L4.807,239.5Z" transform="translate(147.831 -170.574)" fill="#7488be" stroke="#fff7f7" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.762"/>
+      <path id="path1143" d="M-146.824,267.851C-95.819,213.07-45.441,219.916,4.807,239.5" transform="translate(147.831 -170.574)" fill="none" stroke="#fff7f7" stroke-linecap="round" stroke-width="4.762"/>
+      <path id="path1145" d="M-90.886,188.962c67.019,73.3,45.1,135.772.4,190.75" transform="translate(147.831 -170.574)" fill="none" stroke="#fff7f7" stroke-linecap="round" stroke-width="4.762"/>
+      <path id="path1154" d="M39.466,256.865c31.011,10.236,53.977,25.517,54.852,48.162" transform="translate(147.831 -170.574)" fill="none" stroke="#fff7f7" stroke-linecap="round" stroke-width="4.762"/>
+      <path id="path1156" d="M-102.346,370.581c21.893-25.39,47.762-37.483,79.6-25.419" transform="translate(147.831 -170.574)" fill="none" stroke="#fff7f7" stroke-linecap="round" stroke-width="4.762"/>
+    </g>
+  </g>
+</svg>

@@ -16,9 +16,10 @@ export default function (board, play, getPositionOfTeam, playImproved, fixture) 
     let toph= ref(home.players).slice(0, 3)
     return (
         <div className="content">
+           <button onClick={playImproved} style={{position:'absolute', bottom: '11px'}} className='btn  fas fa-play'/>
             {board('dashboard')}
-            <div className="container spacing" style={{maxHeight:'80vh', overflowY:'scroll'}}>
-                <button onClick={playImproved}>play</button>
+            <div className="container spacing" style={{maxHeight:'80vh', overflowY:'scroll', position:'relative'}}>
+             
                 <div className="next text-white haf " style={{position: 'relative'}}>
                     <div className={ away.selected? "away selected bg-primary": "away selected bg-secondary" }  style={{height:'50%'}}>
                         <div className="team-meta spacing">
@@ -26,7 +27,7 @@ export default function (board, play, getPositionOfTeam, playImproved, fixture) 
                             <span className=" meta"><i className="far fa-chart-bar"></i>{away.record===''? 'Record: 0.00 Won: 0 Lost:0': `Record: ${away.record} W:${away.wonTeams.length} L:${away.loseTeams.length}`}</span>
                         </div>
                         <div className="team-info">
-                            <span className="meta" style={{color:'#dc3a3a', fontSize:'1.5em'}}><i className="fas fa-dragon"></i></span>
+                        <img className=" meta team-logo-img" style={{width:'50px'}} src={'.' + away.urlPic} />
 
                         </div>
                         <div className="something-sha">
@@ -43,7 +44,7 @@ export default function (board, play, getPositionOfTeam, playImproved, fixture) 
                                 <span className=" meta"><i className="far fa-chart-bar"></i>{home.record===''? 'Record: 0.00 Won: 0 Lost:0': `Record: ${home.record} W:${home.wonTeams.length} L:${home.loseTeams.length}`}</span>
                             </div>
                             <div className="team-info">
-                                <span className="meta" style={{color:'#dc3a3a', fontSize:'1.5em'}}><i className="fas fa-dragon"></i></span>
+                            <img className="team-logo-img" style={{width:'50px'}} src={'.' + home.urlPic} />
 
                             </div>
                             <div className="something-sha">

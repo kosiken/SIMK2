@@ -30,13 +30,14 @@ class Fixture extends Component {
                       <div className="score">
                           <div className={'spacin'}>
 
-                              <span className="score" style={{width:'70%', padding: '10px 2px'}}>
-                                  <span className="meta" style={{color:'#dc3a3a', fontSize:'1.5em'}}><i className="fas fa-dragon"></i></span>{home.short} </span> <span>{score? score.home: '0'} </span></div>
+                              
+                              <img className="meta team-logo-img" style={{width:'50px'}} src={'.' + home.urlPic} />
+                               <span className="score" style={{width:'70%', padding: '10px 2px'}}> {home.short} </span> <span>{score? score.home: '0'} </span></div>
 
                           <div className={'spacin'}>
+                          <img className="team-logo-img" style={{width:'50px'}} src={'.' + away.urlPic} />  
                             <span className="score" style={{width:'70%', padding: '10px 2px'}}>
-                                <span className="meta" style={{color:'rgb(22,55,205)', fontSize:'1.5em'}}><i
-                                    className="fas fa-hippo"></i></span> {away.short}</span>
+                                {away.short}</span>
                               <span>{score? score.away : '0'}</span></div>
                       </div>
                   </div>

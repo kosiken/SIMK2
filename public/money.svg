@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="102.808" height="114.005" viewBox="0 0 102.808 114.005">
+  <g id="money" transform="translate(227.957 -10.818)">
+    <rect id="rect858" width="102.014" height="68.102" stroke-width="0.794" fill="none" stroke="#fff" transform="translate(-227.56 11.215)"/>
+    <path id="path2070" d="M105.322,14.716c-31,3.352-55.682,5.7-98-5.33V9.353h0V89.622c30.23,10.268,64.1,10.133,98.845,7.5" transform="translate(-233.474 26.078)" fill="#05851e" stroke="#000" stroke-width="0.265"/>
+    <path id="path891" d="M-211.052,15.7V86.714c29.122,9.237,61.84,8.931,95.345,6.489V20.164c-30.439,3.075-54.229,5.532-95.345-4.461Z" transform="translate(-13.483 24.633)" fill="none" stroke="#f3efef" stroke-width="0.265"/>
+    <text id="Money-2" data-name="Money" transform="translate(-216.054 89.612)" fill="gold" font-size="37" font-family="Mistral"><tspan x="0" y="0">Money</tspan></text>
+    <ellipse id="path2072" cx="2.95" cy="5.463" rx="2.95" ry="5.463" transform="translate(-193.851 97.902) rotate(7.477)" fill="#ffe400"/>
+  </g>
+</svg>
