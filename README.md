@@ -1,7 +1,6 @@
 # SIMK2 ![build](https://travis-ci.com/kosiken/SIMK2.svg?branch=master)
 
 
-![CLANG](https://raw.githubusercontent.com/kosiken/SIMK2/master/public/logo.svg)
 
 
 Just a simple season simulator
